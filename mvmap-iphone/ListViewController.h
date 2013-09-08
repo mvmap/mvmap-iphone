@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EGORefreshTableHeaderView.h"
 
-@interface ListViewController : UITableViewController
+@interface ListViewController : UITableViewController <EGORefreshTableHeaderDelegate>
 
 
 - (void)openCategory:(NSInteger)catId;

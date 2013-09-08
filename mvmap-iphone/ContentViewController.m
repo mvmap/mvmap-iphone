@@ -33,7 +33,6 @@
     CGSize size = [UIScreen mainScreen].bounds.size;
     UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height - 66)];
     webView.backgroundColor = [UIColor whiteColor];
-    webView.scalesPageToFit = YES;
     [self.view addSubview:webView];
     self.webView = webView;
     [webView release];

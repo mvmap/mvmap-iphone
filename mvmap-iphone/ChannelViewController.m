@@ -38,17 +38,21 @@
     
     [self initNavigationBarButtons];
     
-
-    NSString *data = [[HttpClient sharedInstance] getUrl:@"http://api.mvmap.com/item/category"];
-    NSDictionary *dict = [data objectFromJSONString];
     
-    NSMutableArray *array = [NSMutableArray arrayWithCapacity:[dict count]];
-    NSEnumerator *enumerator = [dict objectEnumerator];
-    id value;
-    while((value = [enumerator nextObject])){
-        [array addObject:value];
-    }
-    self.dataArray = array;
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+       
+        NSString *data = [[HttpClient sharedInstance] getUrl:NSLocalizedString(@"url.category.all",nil)];
+        NSDictionary *dict = [data objectFromJSONString];
+        
+        NSMutableArray *array = [NSMutableArray arrayWithCapacity:[dict count]];
+        NSEnumerator *enumerator = [dict objectEnumerator];
+        id value;
+        while((value = [enumerator nextObject])){
+            [array addObject:value];
+        }
+        self.dataArray = array;
+        [self.tableView reloadData];
+    });
     
 }
 

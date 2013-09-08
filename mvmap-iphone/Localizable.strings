@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  mvmap-iphone
+
+  Created by XHB on 13-9-8.
+  Copyright (c) 2013年 XHB. All rights reserved.
+*/
+
+url.category.all = "http://api.mvmap.com/item/category";
+url.item.byCatId = "http://api.mvmap.com/item?cat_id=";
+url.item.byId = "http://api.mvmap.com/item/";
+url.item.top = "http://api.mvmap.com/item";

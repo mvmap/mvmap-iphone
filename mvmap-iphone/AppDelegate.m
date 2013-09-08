@@ -74,8 +74,8 @@
     [listViewController release];
 
     IIViewDeckController *viewDeckController = [[IIViewDeckController alloc] initWithCenterViewController:centerViewController leftViewController:leftViewController];
-    viewDeckController.panningMode = IIViewDeckPanningViewPanning;
-    viewDeckController.panningView = listViewController.view;
+//    viewDeckController.panningMode = IIViewDeckPanningViewPanning;
+//    viewDeckController.panningView = listViewController.view;
     self.window.rootViewController = viewDeckController;
     
     [leftViewController release];
